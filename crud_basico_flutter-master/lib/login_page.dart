@@ -1,3 +1,4 @@
+import 'package:crud_en_flutter/my_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 class LoginPage extends StatefulWidget {
@@ -175,7 +176,10 @@ class Botones extends StatelessWidget{
           width: double.infinity,
           height: 50,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,(MaterialPageRoute(builder: (context) => MyHomePage("Pagina principal"))),);
+            },
+            //vincular el login con la pagina de los clientes, solo falta validar al usuario al momento de presionar el boton
             child: Text(
               'Login',
               style: TextStyle(
